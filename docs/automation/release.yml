@@ -1,0 +1,106 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  package:
+    runs-on: macos-15
+    timeout-minutes: 25
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_26.3.app/Contents/Developer
+      RELEASE_TAG: ${{ github.ref_name }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Validate tag
+        shell: bash
+        run: '[[ "$RELEASE_TAG" =~ ^v[0-9]+[.][0-9]+[.][0-9]+$ ]]'
+      - name: Formatting
+        env:
+          DEVELOPER_DIR: /Applications/Xcode_16.4.app/Contents/Developer
+        run: ./scripts/format.sh --check
+      - name: Tests
+        run: ./scripts/test.sh
+      - name: Package universal application
+        run: ./scripts/release.sh "${RELEASE_TAG#v}"
+      - name: Prepare release notes
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import os
+          import re
+          from pathlib import Path
+
+          version = os.environ["RELEASE_TAG"][1:]
+          repository = os.environ["GITHUB_REPOSITORY"]
+          changelog = Path("CHANGELOG.md").read_text()
+          section = re.search(
+              rf"^## {re.escape(version)}(?:[ \t][^\n]*)?\n([\s\S]*?)(?=^## |\Z)",
+              changelog,
+              re.MULTILINE,
+          )
+          if not section or not section.group(1).strip():
+              raise SystemExit(f"Missing changelog section for {version}")
+          changes = section.group(1).strip()
+          notes = [
+              f"Far {version} — a quiet screen-break companion for macOS.",
+              f"Download **Far-{version}-macOS-universal.zip** below. Requires macOS 13 or later; supports Apple silicon and Intel. Extract the ZIP, move Far.app into Applications, and launch it to find Far in the menu bar.",
+              "**This release is ad-hoc signed and not notarized.** macOS may block the first launch. After reviewing the download, you can choose **System Settings → Privacy & Security → Open Anyway** after the blocked launch. See [Apple's first-launch guidance](https://support.apple.com/en-ca/102445).",
+              "### Changes",
+              changes,
+              "### Verify the download",
+              "Download SHA256SUMS.txt into the same folder as the ZIP, then run:",
+              "```sh\nshasum -a 256 -c SHA256SUMS.txt\n```",
+              f"See [validation scope](https://github.com/{repository}/blob/{os.environ['RELEASE_TAG']}/VALIDATION.md) for the manual desktop checklist. Automated tests do not establish behavior on every supported macOS version.",
+          ]
+          Path("dist/release-notes.md").write_text("\n\n".join(notes) + "\n")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release-assets
+          path: |
+            dist/Far-*-macOS-universal.zip
+            dist/SHA256SUMS.txt
+            dist/release-notes.md
+          if-no-files-found: error
+          retention-days: 14
+
+  publish:
+    needs: package
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      RELEASE_TAG: ${{ github.ref_name }}
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: release-assets
+          path: dist
+      - name: Publish release
+        shell: bash
+        run: |
+          if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+            echo "Release $RELEASE_TAG already exists; leaving its assets unchanged."
+            exit 0
+          fi
+          gh release create "$RELEASE_TAG" \
+            --verify-tag \
+            --title "Far ${RELEASE_TAG#v}" \
+            --notes-file dist/release-notes.md \
+            "dist/Far-${RELEASE_TAG#v}-macOS-universal.zip" \
+            dist/SHA256SUMS.txt

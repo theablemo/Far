@@ -8,9 +8,21 @@ Far's first public release is **0.4.0**. Downloads are universal macOS apps for 
 2. Run `./scripts/format.sh --check` and `./scripts/test.sh` with full Xcode 16.4 or later selected. If the local environment cannot start SwiftPM's nested sandbox, use `./scripts/test.sh --disable-sandbox` and record that choice.
 3. Follow the optional native tests in [CONTRIBUTING.md](../CONTRIBUTING.md) and the physical-device checklist in [VALIDATION.md](../VALIDATION.md). Record actual passes and skips. Hosted CI and offscreen checks do not establish desktop behavior across macOS versions.
 4. Review the files being committed. Keep build products, signing material, credentials, and local design reviews outside Git. Review [icon provenance](../Resources/ICONOGRAPHY.md) when artwork changes.
-5. Commit the reviewed source and wait for CI before tagging it.
+5. Commit the reviewed source. If GitHub Actions is enabled, wait for CI before tagging it; otherwise record the local checks used for the release.
 
-CI checks both Xcode 16.4 and 26.3 on `macos-15`. These versions are listed in the [GitHub runner inventory](https://github.com/actions/runner-images/blob/main/images/macos/macos-15-Readme.md); update the workflow when the runner image retires them. The release workflow builds with Xcode 26.3 to include the macOS 26 material implementation while preserving the macOS 13 deployment target.
+The optional CI template checks both Xcode 16.4 and 26.3 on `macos-15`. These versions are listed in the [GitHub runner inventory](https://github.com/actions/runner-images/blob/main/images/macos/macos-15-Readme.md); update the workflow when the runner image retires them. The release template builds with Xcode 26.3 to include the macOS 26 material implementation while preserving the macOS 13 deployment target. The first download was built and verified locally using Xcode 16.4 and its runtime-compatible material implementation.
+
+## Enable GitHub Actions
+
+The first release was published manually. The reviewed [CI](automation/ci.yml) and [release](automation/release.yml) templates are included as source; they are not active workflows yet. To enable them, place them in `.github/workflows/` and push that change using credentials permitted to write workflows:
+
+```sh
+mkdir -p .github/workflows
+cp docs/automation/ci.yml docs/automation/release.yml .github/workflows/
+git add .github/workflows
+git commit -m "Enable GitHub Actions validation and releases"
+git push origin main
+```
 
 ## Package locally
 
@@ -35,7 +47,7 @@ Both files belong on the GitHub Release, not in Git history. A valid ad-hoc sign
 
 ## Publish on GitHub
 
-After the source commit passes CI:
+After the source commit passes validation, and with the release workflow enabled:
 
 ```sh
 git tag -a v0.4.0 -m "Far 0.4.0"

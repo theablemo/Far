@@ -7,6 +7,8 @@
 - Production code and original Soft pause artwork now have the MIT license. The first public download is ad-hoc signed, not Developer ID signed or notarized.
 - Fresh Xcode 16.4 Release build and formatting checks passed. The bundle reports version 0.4.0, build 4, macOS 13.0 minimum, and both arm64 and x86_64 slices. Packaging extracted the ZIP and reverified its strict signature, architectures, and SHA-256 checksum.
 - Reviewed the public file list and local documentation links. A targeted text scan found no private-key markers, GitHub/AWS key patterns, or absolute user-home paths. Builds, local reviews, historical design studies, and credentials are excluded from source control.
+- The public v0.4.0 release archive was downloaded back from GitHub. Its published SHA-256 matched; the extracted app passed strict signature verification and contains both supported architectures. This checks the delivered bytes, not a physical first-launch experience.
+- GitHub Actions templates are supplied under `docs/automation/` but are not active. The first release was published manually after local validation; no hosted CI result is claimed.
 - The README animation uses synthetic native fixtures with opaque surfaces and accelerated timing. It is not a recording of live desktop motion or Liquid Glass.
 
 Earlier entries below record the state at each development milestone; their statements about missing licensing or publication setup are historical. Physical-device checks remain outstanding.

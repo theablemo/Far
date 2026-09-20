@@ -7,7 +7,7 @@ First public release. Universal download for Apple Silicon and Intel, targeting 
 - Adopt the original Soft pause app icon, normal menu-bar mark, menu heading and rest-prompt artwork. Share native vector geometry with a repeatable icon exporter.
 - Separate scheduling types, system services, window controllers, views, and shared styles into focused files.
 - Separate core and app test targets; clean up isolated test preferences after each test.
-- Add contributor documentation, formatting checks, a shared Xcode scheme, and CI.
+- Add contributor documentation, formatting checks, a shared Xcode scheme, and optional CI/release workflow templates.
 - Verify staged application bundles before replacing the previous local build.
 - Add an MIT license, illustrated README, issue templates, release packaging, and SHA-256 checksums.
 

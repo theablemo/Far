@@ -15,7 +15,7 @@ Before submitting a change, run:
 ./scripts/build-app.sh
 ```
 
-The formatter is Apple's `swift-format` bundled with Xcode. CI checks formatting with Xcode 16.4 to keep formatting stable across toolchain upgrades. It runs tests and builds with both Xcode 16.4 and 26.3. The workflow is in `.github/workflows/ci.yml`.
+The formatter is Apple's `swift-format` bundled with Xcode. The optional [CI template](docs/automation/ci.yml) checks formatting with Xcode 16.4 and runs tests and builds with both Xcode 16.4 and 26.3. See the [automation setup](docs/RELEASING.md#enable-github-actions) to enable it. The first public release was verified locally and published manually.
 
 ## Make a change
 
