@@ -1,0 +1,339 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000000000000000000028 /* FarBrandMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000028 /* FarBrandMark.swift */; };
+		A10000000000000000000001 /* BreakEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000001 /* BreakEngine.swift */; };
+		A10000000000000000000002 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000002 /* AppModel.swift */; };
+		A10000000000000000000003 /* FarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000003 /* FarApp.swift */; };
+		A10000000000000000000004 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000004 /* MenuBarView.swift */; };
+		A10000000000000000000005 /* ReminderPanelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000005 /* ReminderPanelController.swift */; };
+		A10000000000000000000006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000A /* Assets.xcassets */; };
+		A10000000000000000000007 /* OnboardingWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000B /* OnboardingWindowController.swift */; };
+		A10000000000000000000008 /* SystemMonitoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000C; };
+		A10000000000000000000015 /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000015 /* AppServices.swift */; };
+		A10000000000000000000016 /* BreakPanelSurface.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000016 /* BreakPanelSurface.swift */; };
+		A10000000000000000000017 /* BreakSoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000017 /* BreakSoundPlayer.swift */; };
+		A10000000000000000000019 /* GlassCompatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000019 /* GlassCompatibility.swift */; };
+		A1000000000000000000001C /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001C /* PreferencesView.swift */; };
+		A1000000000000000000001E /* ReminderPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001E /* ReminderPanelView.swift */; };
+		A1000000000000000000001F /* RestDimmingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000001F /* RestDimmingController.swift */; };
+		A10000000000000000000020 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000020 /* StatusMenuController.swift */; };
+		A10000000000000000000022 /* TimingSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000022 /* TimingSetting.swift */; };
+		A10000000000000000000023 /* ViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000023 /* ViewStyles.swift */; };
+		A10000000000000000000024 /* ActivitySignals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000024 /* ActivitySignals.swift */; };
+		A10000000000000000000026 /* BreakTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000026 /* BreakTypes.swift */; };
+		A10000000000000000000027 /* PanelPlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000027 /* PanelPlacement.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A20000000000000000000028 /* FarBrandMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarBrandMark.swift; sourceTree = "<group>"; };
+		A20000000000000000000001 /* BreakEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakEngine.swift; sourceTree = "<group>"; };
+		A20000000000000000000002 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		A20000000000000000000003 /* FarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarApp.swift; sourceTree = "<group>"; };
+		A20000000000000000000004 /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
+		A20000000000000000000005 /* ReminderPanelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderPanelController.swift; sourceTree = "<group>"; };
+		A20000000000000000000006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A20000000000000000000007 /* PkgInfo */ = {isa = PBXFileReference; lastKnownFileType = text; path = PkgInfo; sourceTree = "<group>"; };
+		A20000000000000000000008 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		A20000000000000000000009 /* Far.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Far.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2000000000000000000000A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2000000000000000000000B /* OnboardingWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingWindowController.swift; sourceTree = "<group>"; };
+		A2000000000000000000000C /* SystemMonitoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMonitoring.swift; sourceTree = "<group>"; };
+		A20000000000000000000015 /* AppServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServices.swift; sourceTree = "<group>"; };
+		A20000000000000000000016 /* BreakPanelSurface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakPanelSurface.swift; sourceTree = "<group>"; };
+		A20000000000000000000017 /* BreakSoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakSoundPlayer.swift; sourceTree = "<group>"; };
+		A20000000000000000000019 /* GlassCompatibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassCompatibility.swift; sourceTree = "<group>"; };
+		A2000000000000000000001C /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		A2000000000000000000001E /* ReminderPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderPanelView.swift; sourceTree = "<group>"; };
+		A2000000000000000000001F /* RestDimmingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestDimmingController.swift; sourceTree = "<group>"; };
+		A20000000000000000000020 /* StatusMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
+		A20000000000000000000022 /* TimingSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimingSetting.swift; sourceTree = "<group>"; };
+		A20000000000000000000023 /* ViewStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStyles.swift; sourceTree = "<group>"; };
+		A20000000000000000000024 /* ActivitySignals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySignals.swift; sourceTree = "<group>"; };
+		A20000000000000000000026 /* BreakTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakTypes.swift; sourceTree = "<group>"; };
+		A20000000000000000000027 /* PanelPlacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelPlacement.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A30000000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A40000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				A40000000000000000000002 /* Sources */,
+				A40000000000000000000005 /* Resources */,
+				A20000000000000000000008 /* README.md */,
+				A40000000000000000000006 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A40000000000000000000002 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A40000000000000000000003 /* FarCore */,
+				A40000000000000000000004 /* Far */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A40000000000000000000003 /* FarCore */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000027 /* PanelPlacement.swift */,
+				A20000000000000000000026 /* BreakTypes.swift */,
+				A20000000000000000000024 /* ActivitySignals.swift */,
+				A20000000000000000000001 /* BreakEngine.swift */,
+			);
+			path = FarCore;
+			sourceTree = "<group>";
+		};
+		A40000000000000000000004 /* Far */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000028 /* FarBrandMark.swift */,
+				A20000000000000000000023 /* ViewStyles.swift */,
+				A20000000000000000000022 /* TimingSetting.swift */,
+				A20000000000000000000020 /* StatusMenuController.swift */,
+				A2000000000000000000001F /* RestDimmingController.swift */,
+				A2000000000000000000001E /* ReminderPanelView.swift */,
+				A2000000000000000000001C /* PreferencesView.swift */,
+				A20000000000000000000019 /* GlassCompatibility.swift */,
+				A20000000000000000000017 /* BreakSoundPlayer.swift */,
+				A20000000000000000000016 /* BreakPanelSurface.swift */,
+				A20000000000000000000015 /* AppServices.swift */,
+				A20000000000000000000002 /* AppModel.swift */,
+				A20000000000000000000003 /* FarApp.swift */,
+				A20000000000000000000004 /* MenuBarView.swift */,
+				A20000000000000000000005 /* ReminderPanelController.swift */,
+				A2000000000000000000000B /* OnboardingWindowController.swift */,
+				A2000000000000000000000C /* SystemMonitoring.swift */,
+			);
+			path = Far;
+			sourceTree = "<group>";
+		};
+		A40000000000000000000005 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000006 /* Info.plist */,
+				A20000000000000000000007 /* PkgInfo */,
+				A2000000000000000000000A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A40000000000000000000006 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000009 /* Far.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A50000000000000000000001 /* Far */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A90000000000000000000002 /* Build configuration list for PBXNativeTarget "Far" */;
+			buildPhases = (
+				A70000000000000000000001 /* Sources */,
+				A30000000000000000000001 /* Frameworks */,
+				A80000000000000000000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Far;
+			productName = Far;
+			productReference = A20000000000000000000009 /* Far.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A60000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					A50000000000000000000001 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+				};
+			};
+			buildConfigurationList = A90000000000000000000001 /* Build configuration list for PBXProject "Far" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A40000000000000000000001;
+			productRefGroup = A40000000000000000000006 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A50000000000000000000001 /* Far */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A80000000000000000000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000006 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A70000000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000027 /* PanelPlacement.swift in Sources */,
+				A10000000000000000000026 /* BreakTypes.swift in Sources */,
+				A10000000000000000000024 /* ActivitySignals.swift in Sources */,
+				A10000000000000000000028 /* FarBrandMark.swift in Sources */,
+				A10000000000000000000023 /* ViewStyles.swift in Sources */,
+				A10000000000000000000022 /* TimingSetting.swift in Sources */,
+				A10000000000000000000020 /* StatusMenuController.swift in Sources */,
+				A1000000000000000000001F /* RestDimmingController.swift in Sources */,
+				A1000000000000000000001E /* ReminderPanelView.swift in Sources */,
+				A1000000000000000000001C /* PreferencesView.swift in Sources */,
+				A10000000000000000000019 /* GlassCompatibility.swift in Sources */,
+				A10000000000000000000017 /* BreakSoundPlayer.swift in Sources */,
+				A10000000000000000000016 /* BreakPanelSurface.swift in Sources */,
+				A10000000000000000000015 /* AppServices.swift in Sources */,
+				A10000000000000000000001 /* BreakEngine.swift in Sources */,
+				A10000000000000000000002 /* AppModel.swift in Sources */,
+				A10000000000000000000003 /* FarApp.swift in Sources */,
+				A10000000000000000000004 /* MenuBarView.swift in Sources */,
+				A10000000000000000000005 /* ReminderPanelController.swift in Sources */,
+				A10000000000000000000007 /* OnboardingWindowController.swift in Sources */,
+				A10000000000000000000008 /* SystemMonitoring.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B10000000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B10000000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+		};
+			name = Release;
+		};
+		B20000000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 4;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MARKETING_VERSION = 0.4.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.far.eyecare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		B20000000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 4;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MARKETING_VERSION = 0.4.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.far.eyecare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A90000000000000000000001 /* Build configuration list for PBXProject "Far" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B10000000000000000000001 /* Debug */,
+				B10000000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A90000000000000000000002 /* Build configuration list for PBXNativeTarget "Far" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B20000000000000000000001 /* Debug */,
+				B20000000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A60000000000000000000001 /* Project object */;
+}

@@ -1,0 +1,29 @@
+name: Bug report
+description: Report unexpected behavior in Far.
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Far version
+      placeholder: 0.4.0
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: macOS and Mac
+      placeholder: macOS 26, Apple Silicon, two displays
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: What happened?
+      description: Include steps to reproduce, what you expected, and what actually happened.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Relevant settings and context
+      description: Mention timing changes, Meeting mode, sleep or lock, full-screen apps, or connected displays if relevant. Remove personal details from screenshots and logs.

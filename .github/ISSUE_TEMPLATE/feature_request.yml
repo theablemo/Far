@@ -1,0 +1,15 @@
+name: Feature request
+description: Suggest an improvement to Far.
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What would you like to improve?
+      description: Describe the situation and the outcome you want.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea
+      description: Include alternatives you have considered, if useful.

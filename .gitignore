@@ -1,0 +1,23 @@
+.DS_Store
+.build/
+dist/
+.swiftpm/
+DerivedData/
+.xcode-derived/
+xcuserdata/
+
+# Local review output and agent working files
+.impeccable/
+.codex/
+.agents/
+artifacts/
+design/
+
+# Local configuration and signing material
+.env
+.env.*
+!.env.example
+*.p12
+*.p8
+*.mobileprovision
+*.provisionprofile
